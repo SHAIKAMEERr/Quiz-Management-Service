@@ -64,7 +64,7 @@ mvn spring-boot:run
 ```
 
 ### 5. Access the Application
-- Swagger UI (API Documentation): [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+- Swagger UI (API Documentation): [http://localhost:8080/swagger-ui.html](http://localhost:8082/swagger-ui.html)
 
 ---
 
