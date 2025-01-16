@@ -48,6 +48,7 @@ cd quiz-management-service
    ```
 2. Update the database configuration in `application.properties`:
    ```properties
+   server.port=8082
    spring.datasource.url=jdbc:mysql://localhost:3306/quiz_management
    spring.datasource.username=<your_db_username>
    spring.datasource.password=<your_db_password>
