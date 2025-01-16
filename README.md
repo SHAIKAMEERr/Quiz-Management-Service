@@ -11,6 +11,7 @@ The Quiz Management Service is a backend application designed to manage quizzes,
 - Fetch quizzes with their associated questions.
 - Manage user responses and scores.
 - Role-based access control for users (Admin, Instructor, Student).
+- Comprehensive API documentation with Swagger.
 
 ---
 
@@ -64,7 +65,7 @@ mvn spring-boot:run
 ```
 
 ### 5. Access the Application
-- Swagger UI (API Documentation): [http://localhost:8080/swagger-ui.html](http://localhost:8082/swagger-ui.html)
+- Swagger UI (API Documentation): [http://localhost:8082/swagger-ui/index.html](http://localhost:8082/swagger-ui/index.html)
 
 ---
 
@@ -99,6 +100,8 @@ mvn spring-boot:run
 - **MySQL 8.0**
 - **Swagger** (For API documentation)
 - **Lombok** (For reducing boilerplate code)
+- **ModelMapper** (For DTO to Entity mapping)
+- **Spring Security** (For secure authentication and role-based access)
 
 ---
 
