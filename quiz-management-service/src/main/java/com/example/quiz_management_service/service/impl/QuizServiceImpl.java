@@ -39,7 +39,9 @@ public class QuizServiceImpl implements QuizService {
     @Override
     public List<QuizResponseDTO> getAllQuizzes() {
         List<QuizEntity> quizEntities = quizDAO.findAll();
-        return quizEntities.stream().map(entity -> modelMapper.map(entity, QuizResponseDTO.class)).collect(Collectors.toList());
+        return quizEntities.stream()
+                .map(entity -> modelMapper.map(entity, QuizResponseDTO.class))
+                .collect(Collectors.toList());
     }
 
     @Override

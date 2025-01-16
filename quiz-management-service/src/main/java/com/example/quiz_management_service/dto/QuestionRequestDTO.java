@@ -8,8 +8,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class QuestionRequestDTO {
-    private String text;
-    private String[] options;
-    private String correctAnswer;
-    private Long quizId;
+    
+    private Long id;
+    
+    private String questionText;
+    
+    private String questionType; 
+    
+    private String difficultyLevel;
+    
+    private Long quizId; 
 }

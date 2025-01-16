@@ -1,4 +1,4 @@
-package com.example.quiz_management_service.pojo;
+package com.example.quiz_management_service.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "options")
-public class Option {
+public class OptionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class Option {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "question_id", nullable = false)
-    private Question question;
+    private QuestionEntity question;
 
     @Column(name = "option_text", nullable = false, length = 500)
     private String optionText;

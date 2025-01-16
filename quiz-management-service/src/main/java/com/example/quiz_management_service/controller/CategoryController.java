@@ -30,36 +30,66 @@ public class CategoryController {
 
     @PostMapping
     public ResponseEntity<CategoryResponseDTO> createCategory(@RequestBody CategoryRequestDTO categoryRequestDTO) {
-        logger.info("Creating a new category");
-        CategoryResponseDTO createdCategory = categoryService.createCategory(categoryRequestDTO);
-        return ResponseEntity.ok(createdCategory);
+        logger.info("Received request to create a new category: {}", categoryRequestDTO);
+        try {
+            CategoryResponseDTO createdCategory = categoryService.createCategory(categoryRequestDTO);
+            logger.info("Successfully created category with ID: {}", createdCategory.getId());
+            return ResponseEntity.ok(createdCategory);
+        } catch (Exception e) {
+            logger.error("Error occurred while creating a category", e);
+            throw e; // Or handle exception accordingly
+        }
     }
 
     @GetMapping
     public ResponseEntity<List<CategoryResponseDTO>> getAllCategories() {
-        logger.info("Fetching all categories");
-        List<CategoryResponseDTO> categories = categoryService.getAllCategories();
-        return ResponseEntity.ok(categories);
+        logger.info("Received request to fetch all categories");
+        try {
+            List<CategoryResponseDTO> categories = categoryService.getAllCategories();
+            logger.info("Successfully fetched {} categories", categories.size());
+            return ResponseEntity.ok(categories);
+        } catch (Exception e) {
+            logger.error("Error occurred while fetching all categories", e);
+            throw e; // Or handle exception accordingly
+        }
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<CategoryResponseDTO> getCategoryById(@PathVariable Long id) {
-        logger.info("Fetching category with ID: {}", id);
-        CategoryResponseDTO category = categoryService.getCategoryById(id);
-        return ResponseEntity.ok(category);
+        logger.info("Received request to fetch category with ID: {}", id);
+        try {
+            CategoryResponseDTO category = categoryService.getCategoryById(id);
+            logger.info("Successfully fetched category: {}", category);
+            return ResponseEntity.ok(category);
+        } catch (Exception e) {
+            logger.error("Error occurred while fetching category with ID: {}", id, e);
+            throw e; // Or handle exception accordingly
+        }
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<CategoryResponseDTO> updateCategory(@PathVariable Long id, @RequestBody CategoryRequestDTO categoryRequestDTO) {
-        logger.info("Updating category with ID: {}", id);
-        CategoryResponseDTO updatedCategory = categoryService.updateCategory(id, categoryRequestDTO);
-        return ResponseEntity.ok(updatedCategory);
+        logger.info("Received request to update category with ID: {}, Data: {}", id, categoryRequestDTO);
+        try {
+            CategoryResponseDTO updatedCategory = categoryService.updateCategory(id, categoryRequestDTO);
+            logger.info("Successfully updated category with ID: {}", updatedCategory.getId());
+            return ResponseEntity.ok(updatedCategory);
+        } catch (Exception e) {
+            logger.error("Error occurred while updating category with ID: {}", id, e);
+            throw e; // Or handle exception accordingly
+        }
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteCategory(@PathVariable Long id) {
-        logger.info("Deleting category with ID: {}", id);
-        categoryService.deleteCategory(id);
-        return ResponseEntity.ok("Category deleted successfully");
+        logger.info("Received request to delete category with ID: {}", id);
+        try {
+            categoryService.deleteCategory(id);
+            logger.info("Successfully deleted category with ID: {}", id);
+            return ResponseEntity.ok("Category deleted successfully");
+        } catch (Exception e) {
+            logger.error("Error occurred while deleting category with ID: {}", id, e);
+            throw e; // Or handle exception accordingly
+        }
     }
 }

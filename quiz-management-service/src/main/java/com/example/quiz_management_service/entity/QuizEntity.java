@@ -1,27 +1,58 @@
 package com.example.quiz_management_service.entity;
 
-import com.example.quiz_management_service.pojo.Quiz;
+import java.sql.Timestamp;
+import java.util.Date;
+import java.util.List;
 
-import jakarta.persistence.*;
-import lombok.*;
+import com.example.quiz_management_service.constant.DifficultyLevel;
 
-@Entity
-@Table(name = "quizzes")
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name = "quizzes")
 public class QuizEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "title", nullable = false, length = 255)
     private String title;
+
+    @Column(name = "description", length = 500)
+    private String description;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     private CategoryEntity category;
-    
-    private Quiz quiz;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "difficulty_level", nullable = false)
+    private DifficultyLevel difficultyLevel;
+
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private Timestamp createdAt = new Timestamp(new Date().getTime());
+
+    @Column(name = "updated_at", nullable = false)
+    private Timestamp updatedAt = new Timestamp(new Date().getTime());
+
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, orphanRemoval = true) // Added @OneToMany annotation
+    private List<QuestionEntity> questions; 
 }

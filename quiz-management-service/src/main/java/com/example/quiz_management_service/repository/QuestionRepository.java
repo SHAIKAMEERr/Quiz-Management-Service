@@ -10,6 +10,10 @@ import com.example.quiz_management_service.entity.QuestionEntity;
 
 @Repository
 public interface QuestionRepository extends JpaRepository<QuestionEntity, Long> {
+	
     List<QuestionEntity> findByQuizId(Long quizId);
+    
     List<QuestionEntity> findByContentContaining(String content);
+    
+    List<QuestionEntity> findByQuestionTextContaining(String questionText);
 }

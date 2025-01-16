@@ -1,5 +1,9 @@
 package com.example.quiz_management_service.entity;
 
+import java.sql.Timestamp;
+import java.util.Date;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,18 +13,27 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "categories")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name = "categories")
 public class CategoryEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name", nullable = false, unique = true, length = 255)
     private String name;
-    private Double score;
-}
 
+    @Column(name = "description", length = 500)
+    private String description;
+
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private Timestamp createdAt = new Timestamp(new Date().getTime());
+
+    @Column(name = "updated_at", nullable = false)
+    private Timestamp updatedAt = new Timestamp(new Date().getTime());
+
+}

@@ -12,9 +12,9 @@ public interface QuestionDAO extends JpaRepository<QuestionEntity, Long> {
     // 1. Find questions by a keyword (case-insensitive search)
     @Query("SELECT q FROM QuestionEntity q WHERE LOWER(q.questionText) LIKE LOWER(CONCAT('%', :keyword, '%'))")
     List<QuestionEntity> findQuestionsByKeyword(@Param("keyword") String keyword);
-
-    // 2. Find questions by category ID
-    List<QuestionEntity> findByCategoryId(Long categoryId);
+    
+    @Query("SELECT q FROM QuestionEntity q WHERE q.quiz.category.id = :categoryId") 
+    List<QuestionEntity> findByCategoryId(@Param("categoryId") Long categoryId);
 
     // 3. Find questions by difficulty level
     List<QuestionEntity> findByDifficultyLevel(String difficultyLevel);
@@ -24,11 +24,11 @@ public interface QuestionDAO extends JpaRepository<QuestionEntity, Long> {
     List<QuestionEntity> findByCategoryAndDifficulty(@Param("categoryId") Long categoryId, @Param("difficulty") String difficulty);
 
     // 5. Fetch all questions ordered by created date
-    List<QuestionEntity> findAllByOrderByCreatedDateAsc();
-
+    List<QuestionEntity> findAllByOrderByCreatedAtAsc();
+    
     // 6. Get a random set of questions from a specific category
     @Query("SELECT q FROM QuestionEntity q WHERE q.category.id = :categoryId ORDER BY FUNCTION('RAND')")
     List<QuestionEntity> findRandomQuestionsByCategory(@Param("categoryId") Long categoryId);
     
-    List<QuestionEntity> findByCategoryIdAndDifficultyLevel(Long categoryId, String difficultyLevel);
-}
+    @Query("SELECT q FROM QuestionEntity q WHERE q.category.id = :categoryId AND q.difficultyLevel = :difficultyLevel")
+    List<QuestionEntity> findByCategoryIdAndDifficultyLevel(@Param("categoryId") Long categoryId, @Param("difficultyLevel") String difficultyLevel);}

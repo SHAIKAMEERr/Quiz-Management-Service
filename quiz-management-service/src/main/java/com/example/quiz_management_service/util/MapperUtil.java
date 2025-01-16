@@ -1,10 +1,12 @@
 package com.example.quiz_management_service.util;
 
+
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Component;
+
 import com.example.quiz_management_service.dto.QuestionRequestDTO;
 import com.example.quiz_management_service.dto.QuestionResponseDTO;
 import com.example.quiz_management_service.entity.QuestionEntity;
-import org.modelmapper.ModelMapper;
-import org.springframework.stereotype.Component;
 
 @Component
 public class MapperUtil {
