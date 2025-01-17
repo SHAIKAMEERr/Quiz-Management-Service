@@ -17,4 +17,6 @@ public interface QuizDAO extends JpaRepository<QuizEntity, Long> {
 
     @Query("SELECT q FROM QuizEntity q WHERE q.title LIKE %:title%")
     List<QuizEntity> findQuizzesByTitle(@Param("title") String title);
+    
+    
 }

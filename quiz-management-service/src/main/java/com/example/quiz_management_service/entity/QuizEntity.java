@@ -1,6 +1,5 @@
 package com.example.quiz_management_service.entity;
 
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -48,10 +47,10 @@ public class QuizEntity {
     private DifficultyLevel difficultyLevel;
 
     @Column(name = "created_at", nullable = false, updatable = false)
-    private Timestamp createdAt = new Timestamp(new Date().getTime());
+    private Date createdAt;  // Changed from Timestamp
 
     @Column(name = "updated_at", nullable = false)
-    private Timestamp updatedAt = new Timestamp(new Date().getTime());
+    private Date updatedAt;  // Changed from Timestamp
 
     @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, orphanRemoval = true) // Added @OneToMany annotation
     private List<QuestionEntity> questions; 

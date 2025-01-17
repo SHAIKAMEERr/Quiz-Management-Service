@@ -1,0 +1,89 @@
+-- Create Database
+CREATE DATABASE quiz_management;
+
+-- Use Database
+USE quiz_management;
+
+-- Table: Categories
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL UNIQUE,
+    description VARCHAR(500),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Table: Quizzes
+CREATE TABLE quizzes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description VARCHAR(500),
+    category_id INT,
+    difficulty_level ENUM('EASY', 'MEDIUM', 'HARD') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+);
+
+-- Table: Questions
+CREATE TABLE questions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    quiz_id INT NOT NULL,
+    question_text TEXT NOT NULL,
+    question_type ENUM('MCQ', 'TRUE_FALSE') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (quiz_id) REFERENCES quizzes(id) ON DELETE CASCADE
+);
+
+-- Table: Options (for MCQ questions)
+CREATE TABLE options (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    question_id INT NOT NULL,
+    option_text VARCHAR(500) NOT NULL,
+    is_correct BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (question_id) REFERENCES questions(id) ON DELETE CASCADE
+);
+
+-- Insert Sample Data into Categories
+INSERT INTO categories (name, description)
+VALUES 
+    ('Science', 'Science-related quizzes'),
+    ('Math', 'Math-related quizzes'),
+    ('History', 'History-related quizzes');
+
+-- Insert Sample Data into Quizzes
+INSERT INTO quizzes (title, description, category_id, difficulty_level)
+VALUES
+    ('Basic Science Quiz', 'A quiz for science beginners', 1, 'EASY'),
+    ('Advanced Math Quiz', 'A challenging math quiz', 2, 'HARD'),
+    ('World History Quiz', 'Test your knowledge of world history', 3, 'MEDIUM');
+
+-- Insert Sample Data into Questions
+INSERT INTO questions (quiz_id, question_text, question_type)
+VALUES
+    (1, 'What is the chemical symbol for water?', 'MCQ'),
+    (1, 'Is the Earth flat?', 'TRUE_FALSE'),
+    (2, 'What is the derivative of x^2?', 'MCQ'),
+    (3, 'Who was the first President of the United States?', 'MCQ');
+
+-- Insert Sample Data into Options
+INSERT INTO options (question_id, option_text, is_correct)
+VALUES
+    (1, 'H2O', TRUE),
+    (1, 'O2', FALSE),
+    (1, 'CO2', FALSE),
+    (2, 'TRUE', FALSE),
+    (2, 'FALSE', TRUE),
+    (3, '2x', TRUE),
+    (3, 'x^3', FALSE),
+    (3, '1/x', FALSE),
+    (4, 'George Washington', TRUE),
+    (4, 'Abraham Lincoln', FALSE),
+    (4, 'Thomas Jefferson', FALSE);
+
+-- Query to View All Data
+SELECT * FROM categories;
+SELECT * FROM quizzes;
+SELECT * FROM questions;
+SELECT * FROM options;

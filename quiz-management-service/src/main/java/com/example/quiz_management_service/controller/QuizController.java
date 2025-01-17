@@ -30,6 +30,7 @@ public class QuizController {
         logger.info("Quiz created successfully with ID: {}", createdQuiz.getId());
         return ResponseEntity.ok(createdQuiz);
     }
+    
 
     @GetMapping
     public ResponseEntity<List<QuizResponseDTO>> getAllQuizzes() {

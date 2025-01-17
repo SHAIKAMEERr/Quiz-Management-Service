@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,10 +15,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.example.quiz_management_service.dto.CategoryRequestDTO;
 import com.example.quiz_management_service.dto.CategoryResponseDTO;
 import com.example.quiz_management_service.service.CategoryService;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/categories")
@@ -29,17 +33,22 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @PostMapping
-    public ResponseEntity<CategoryResponseDTO> createCategory(@RequestBody CategoryRequestDTO categoryRequestDTO) {
+    public ResponseEntity<CategoryResponseDTO> createCategory(@Valid @RequestBody CategoryRequestDTO categoryRequestDTO) {
         logger.info("Received request to create a new category: {}", categoryRequestDTO);
         try {
+            // Call service to create the category
             CategoryResponseDTO createdCategory = categoryService.createCategory(categoryRequestDTO);
+
+            // Log success and return response
             logger.info("Successfully created category with ID: {}", createdCategory.getId());
-            return ResponseEntity.ok(createdCategory);
+            return ResponseEntity.status(HttpStatus.CREATED).body(createdCategory);
         } catch (Exception e) {
+            // Log error and rethrow it
             logger.error("Error occurred while creating a category", e);
-            throw e; // Or handle exception accordingly
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to create category", e);
         }
     }
+
 
     @GetMapping
     public ResponseEntity<List<CategoryResponseDTO>> getAllCategories() {

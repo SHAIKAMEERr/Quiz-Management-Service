@@ -118,10 +118,11 @@ public class QuestionController {
             return ResponseEntity.ok(createdQuestion);
         } catch (Exception e) {
             logger.error("Error occurred while adding a new question", e);
+            // Re-throw the exception for now, but you can also choose to handle it here
+            // and return a more informative error response to the client.
             throw e;
         }
     }
-
     @DeleteMapping("/{questionId}")
     public ResponseEntity<Void> deleteQuestion(@PathVariable Long questionId) {
         logger.info("Received request to delete question with ID: {}", questionId);

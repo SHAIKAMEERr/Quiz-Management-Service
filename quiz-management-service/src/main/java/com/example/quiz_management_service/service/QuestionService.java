@@ -19,7 +19,7 @@ public interface QuestionService {
 
     List<QuestionResponseDTO> getRandomQuestionsByCategory(Long categoryId);
     
-    QuestionResponseDTO addQuestion(QuestionRequestDTO questionRequestDTO);
+    QuestionResponseDTO addQuestion(QuestionRequestDTO questionRequestDTO); 
     
     void deleteQuestion(Long questionID);
 }

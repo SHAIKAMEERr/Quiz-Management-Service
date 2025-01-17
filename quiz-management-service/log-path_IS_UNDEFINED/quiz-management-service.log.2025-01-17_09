@@ -1,0 +1,115 @@
+[INFO ] 2025-01-17 09:35:54.450 [main] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplicationTests - Starting QuizManagementServiceApplicationTests using Java 17.0.12 with PID 14528 (started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-17 09:35:54.458 [main] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-17 09:35:55.399 [main] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-17 09:35:55.516 [main] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-17 09:35:56.192 [main] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2025-01-17 09:35:56.971 [main] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3dc39459
+[INFO ] 2025-01-17 09:35:56.976 [main] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2025-01-17 09:35:57.090 [main] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-17 09:35:57.226 [main] [quiz-management-service] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.4.Final
+[INFO ] 2025-01-17 09:35:57.298 [main] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-17 09:35:57.808 [main] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-17 09:35:58.045 [main] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-17 09:35:59.295 [main] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-17 09:35:59.299 [main] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-17 09:35:59.711 [main] [quiz-management-service] org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+[WARN ] 2025-01-17 09:36:01.049 [main] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2025-01-17 09:36:01.677 [main] [quiz-management-service] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 5fd3fb1b-8c7b-46a7-89df-411a1a18b0a7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[INFO ] 2025-01-17 09:36:01.703 [main] [quiz-management-service] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[INFO ] 2025-01-17 09:36:02.151 [main] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplicationTests - Started QuizManagementServiceApplicationTests in 8.201 seconds (process running for 9.5)
+[INFO ] 2025-01-17 09:36:02.903 [SpringApplicationShutdownHook] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-17 09:36:02.907 [SpringApplicationShutdownHook] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2025-01-17 09:36:02.920 [SpringApplicationShutdownHook] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2025-01-17 09:36:28.796 [main] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplicationTests - Starting QuizManagementServiceApplicationTests using Java 17.0.12 with PID 20156 (started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-17 09:36:28.798 [main] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-17 09:36:29.661 [main] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-17 09:36:29.777 [main] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-17 09:36:30.397 [main] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2025-01-17 09:36:30.907 [main] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@197ce367
+[INFO ] 2025-01-17 09:36:30.909 [main] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2025-01-17 09:36:30.992 [main] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-17 09:36:31.086 [main] [quiz-management-service] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.4.Final
+[INFO ] 2025-01-17 09:36:31.158 [main] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-17 09:36:31.623 [main] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-17 09:36:31.770 [main] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-17 09:36:32.912 [main] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-17 09:36:32.915 [main] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-17 09:36:33.304 [main] [quiz-management-service] org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+[WARN ] 2025-01-17 09:36:34.535 [main] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2025-01-17 09:36:35.132 [main] [quiz-management-service] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7aa695b9-8fa9-4d76-9f61-cfb1d197b8b4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[INFO ] 2025-01-17 09:36:35.152 [main] [quiz-management-service] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[INFO ] 2025-01-17 09:36:35.354 [main] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplicationTests - Started QuizManagementServiceApplicationTests in 7.023 seconds (process running for 8.349)
+[INFO ] 2025-01-17 09:36:36.135 [SpringApplicationShutdownHook] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-17 09:36:36.139 [SpringApplicationShutdownHook] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2025-01-17 09:36:36.153 [SpringApplicationShutdownHook] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2025-01-17 09:37:41.772 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 17488 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-17 09:37:41.773 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-17 09:37:41.825 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2025-01-17 09:37:41.825 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2025-01-17 09:37:42.582 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-17 09:37:42.693 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-17 09:37:43.622 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-17 09:37:43.642 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-17 09:37:43.646 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-17 09:37:43.646 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-17 09:37:43.717 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-17 09:37:43.719 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1892 ms
+[INFO ] 2025-01-17 09:37:43.852 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2025-01-17 09:37:44.215 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c3187a4
+[INFO ] 2025-01-17 09:37:44.220 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2025-01-17 09:37:44.279 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-17 09:37:44.384 [restartedMain] [quiz-management-service] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.4.Final
+[INFO ] 2025-01-17 09:37:44.422 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-17 09:37:44.753 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-17 09:37:44.923 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-17 09:37:45.920 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-17 09:37:45.923 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-17 09:37:46.213 [restartedMain] [quiz-management-service] org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+[WARN ] 2025-01-17 09:37:47.121 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2025-01-17 09:37:47.519 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 5a920c2c-3a10-4da0-b885-7c8d144621b9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[INFO ] 2025-01-17 09:37:47.533 [restartedMain] [quiz-management-service] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[INFO ] 2025-01-17 09:37:47.727 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-17 09:37:47.742 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-17 09:37:47.772 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-17 09:37:47.784 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 6.537 seconds (process running for 7.021)
+[INFO ] 2025-01-17 09:41:05.344 [http-nio-8082-exec-2] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-01-17 09:41:05.345 [http-nio-8082-exec-2] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-01-17 09:41:05.350 [http-nio-8082-exec-2] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[WARN ] 2025-01-17 09:41:05.558 [http-nio-8082-exec-2] [quiz-management-service] org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [122] milliseconds.
+[WARN ] 2025-01-17 09:58:31.360 [http-nio-8082-exec-10] [quiz-management-service] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
