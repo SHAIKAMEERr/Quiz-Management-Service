@@ -12,6 +12,8 @@ The Quiz Management Service is a backend application designed to manage quizzes,
 - Manage user responses and scores.
 - Role-based access control for users (Admin, Instructor, Student).
 - Comprehensive API documentation with Swagger.
+- API versioning and naming following RESTful standards.
+- Secure data handling with DTOs and POJOs using ModelMapper.
 
 ---
 
@@ -22,6 +24,8 @@ This service is developed using:
 - **MySQL** (Database for persistent storage)
 - **Spring Security** (For authentication and role-based authorization)
 - **REST API** (For seamless integration with front-end applications)
+- **ModelMapper** (For object mapping between DTOs and entities)
+- **Lombok** (For reducing boilerplate code)
 
 ---
 
@@ -103,6 +107,7 @@ mvn spring-boot:run
 - **Lombok** (For reducing boilerplate code)
 - **ModelMapper** (For DTO to Entity mapping)
 - **Spring Security** (For secure authentication and role-based access)
+- **NamedParameterJdbcTemplate** (For SQL operations)
 
 ---
 
