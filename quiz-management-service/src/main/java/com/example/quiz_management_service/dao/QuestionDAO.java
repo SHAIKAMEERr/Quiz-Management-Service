@@ -12,8 +12,9 @@ public interface QuestionDAO extends JpaRepository<QuestionEntity, Long> {
     // 1. Find questions by a keyword (case-insensitive search)
     @Query("SELECT q FROM QuestionEntity q WHERE LOWER(q.questionText) LIKE LOWER(CONCAT('%', :keyword, '%'))")
     List<QuestionEntity> findQuestionsByKeyword(@Param("keyword") String keyword);
-    
-    @Query("SELECT q FROM QuestionEntity q WHERE q.quiz.category.id = :categoryId") 
+
+    // 2. Find questions by category ID
+    @Query("SELECT q FROM QuestionEntity q WHERE q.category.id = :categoryId")
     List<QuestionEntity> findByCategoryId(@Param("categoryId") Long categoryId);
 
     // 3. Find questions by difficulty level
@@ -25,10 +26,19 @@ public interface QuestionDAO extends JpaRepository<QuestionEntity, Long> {
 
     // 5. Fetch all questions ordered by created date
     List<QuestionEntity> findAllByOrderByCreatedAtAsc();
-    
-    // 6. Get a random set of questions from a specific category
-    @Query("SELECT q FROM QuestionEntity q WHERE q.category.id = :categoryId ORDER BY FUNCTION('RAND')")
+
+    @Query("SELECT q FROM QuestionEntity q WHERE q.category.id = :categoryId ORDER BY RANDOM()")
     List<QuestionEntity> findRandomQuestionsByCategory(@Param("categoryId") Long categoryId);
+
+    // 7. Get a random set of questions from a specific category with difficulty level
+    @Query(value = "SELECT q FROM QuestionEntity q WHERE q.category.id = :categoryId AND q.difficultyLevel = :difficultyLevel ORDER BY FUNCTION('RAND')")
+    List<QuestionEntity> findRandomQuestionsByCategoryAndDifficulty(@Param("categoryId") Long categoryId, @Param("difficultyLevel") String difficultyLevel);
+
+    // 8. Get all questions by quiz ID
+    @Query("SELECT q FROM QuestionEntity q WHERE q.quiz.id = :quizId")
+    List<QuestionEntity> findByQuizId(@Param("quizId") Long quizId);
     
-    @Query("SELECT q FROM QuestionEntity q WHERE q.category.id = :categoryId AND q.difficultyLevel = :difficultyLevel")
-    List<QuestionEntity> findByCategoryIdAndDifficultyLevel(@Param("categoryId") Long categoryId, @Param("difficultyLevel") String difficultyLevel);}
+    @Query("SELECT q FROM QuestionEntity q WHERE q.quiz.category.id = :categoryId AND q.difficultyLevel = :difficultyLevel")
+    List<QuestionEntity> findByCategoryIdAndDifficultyLevel(@Param("categoryId") Long categoryId, @Param("difficultyLevel") String difficultyLevel);
+
+}

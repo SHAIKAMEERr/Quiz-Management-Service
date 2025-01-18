@@ -9,10 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.quiz_management_service.dao.CategoryDAO;
 import com.example.quiz_management_service.dao.QuestionDAO;
 import com.example.quiz_management_service.dto.QuestionRequestDTO;
 import com.example.quiz_management_service.dto.QuestionResponseDTO;
+import com.example.quiz_management_service.entity.CategoryEntity;
 import com.example.quiz_management_service.entity.QuestionEntity;
+import com.example.quiz_management_service.exception.CategoryNotFoundException;
 import com.example.quiz_management_service.exception.QuestionNotFoundException;
 import com.example.quiz_management_service.service.QuestionService;
 import com.example.quiz_management_service.util.MapperUtil;
@@ -23,11 +26,13 @@ public class QuestionServiceImpl implements QuestionService {
     private static final Logger logger = LoggerFactory.getLogger(QuestionServiceImpl.class);
 
     private final QuestionDAO questionDAO;
+    private final CategoryDAO categoryDAO; // New DAO for fetching categories
     private final MapperUtil mapperUtil;
 
     @Autowired
-    public QuestionServiceImpl(QuestionDAO questionDAO, MapperUtil mapperUtil) {
+    public QuestionServiceImpl(QuestionDAO questionDAO, CategoryDAO categoryDAO, MapperUtil mapperUtil) {
         this.questionDAO = questionDAO;
+        this.categoryDAO = categoryDAO;
         this.mapperUtil = mapperUtil;
     }
 
@@ -112,8 +117,18 @@ public class QuestionServiceImpl implements QuestionService {
     @Transactional
     public QuestionResponseDTO addQuestion(QuestionRequestDTO questionRequestDTO) {
         logger.info("Adding new question: {}", questionRequestDTO);
+
+        // Fetch the CategoryEntity using the categoryId from the request
+        CategoryEntity category = categoryDAO.findById(questionRequestDTO.getCategoryId())
+                .orElseThrow(() -> new CategoryNotFoundException("Category not found for ID: " + questionRequestDTO.getCategoryId()));
+
+        // Map the DTO to QuestionEntity and set the category
         QuestionEntity questionEntity = mapperUtil.map(questionRequestDTO, QuestionEntity.class);
+        questionEntity.setCategory(category);
+
+        // Save the question
         QuestionEntity savedEntity = questionDAO.save(questionEntity);
+
         logger.info("Question added successfully: {}", savedEntity);
         return mapperUtil.map(savedEntity, QuestionResponseDTO.class);
     }

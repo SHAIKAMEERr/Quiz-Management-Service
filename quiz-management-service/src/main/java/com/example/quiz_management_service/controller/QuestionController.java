@@ -18,6 +18,8 @@ import com.example.quiz_management_service.dto.QuestionRequestDTO;
 import com.example.quiz_management_service.dto.QuestionResponseDTO;
 import com.example.quiz_management_service.service.QuestionService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/questions")
 public class QuestionController {
@@ -108,9 +110,9 @@ public class QuestionController {
             throw e;
         }
     }
-
+    
     @PostMapping
-    public ResponseEntity<QuestionResponseDTO> addQuestion(@RequestBody QuestionRequestDTO questionRequestDTO) {
+    public ResponseEntity<QuestionResponseDTO> addQuestion(@Valid @RequestBody QuestionRequestDTO questionRequestDTO) {
         logger.info("Received request to add a new question: {}", questionRequestDTO);
         try {
             QuestionResponseDTO createdQuestion = questionService.addQuestion(questionRequestDTO);
@@ -118,11 +120,11 @@ public class QuestionController {
             return ResponseEntity.ok(createdQuestion);
         } catch (Exception e) {
             logger.error("Error occurred while adding a new question", e);
-            // Re-throw the exception for now, but you can also choose to handle it here
-            // and return a more informative error response to the client.
             throw e;
         }
     }
+
+    
     @DeleteMapping("/{questionId}")
     public ResponseEntity<Void> deleteQuestion(@PathVariable Long questionId) {
         logger.info("Received request to delete question with ID: {}", questionId);

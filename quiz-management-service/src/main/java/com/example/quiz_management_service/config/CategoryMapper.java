@@ -5,8 +5,6 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import com.example.quiz_management_service.constant.DifficultyLevel;
-import com.example.quiz_management_service.constant.QuestionType;
 import com.example.quiz_management_service.dto.CategoryRequestDTO;
 import com.example.quiz_management_service.dto.CategoryResponseDTO;
 import com.example.quiz_management_service.dto.OptionRequestDTO;
@@ -70,19 +68,26 @@ public class CategoryMapper {
 
     public QuestionEntity toEntity(QuestionRequestDTO dto) {
         QuestionEntity questionEntity = modelMapper.map(dto, QuestionEntity.class);
+
         if (dto.getQuizId() != null) {
             QuizEntity quiz = new QuizEntity();
             quiz.setId(dto.getQuizId());
             questionEntity.setQuiz(quiz);
         }
-        if (dto.getQuestionType() != null) { // Check for null before using
-            questionEntity.setQuestionType(QuestionType.valueOf(dto.getQuestionType()));
+
+        // Directly set the enum value without calling valueOf
+        if (dto.getQuestionType() != null) {
+            questionEntity.setQuestionType(dto.getQuestionType()); // Already an enum, no need for valueOf
         }
-        if (dto.getDifficultyLevel() != null) { // Check for null before using
-            questionEntity.setDifficultyLevel(DifficultyLevel.valueOf(dto.getDifficultyLevel()));
+
+        if (dto.getDifficultyLevel() != null) {
+            questionEntity.setDifficultyLevel(dto.getDifficultyLevel()); // Already an enum, no need for valueOf
         }
+
         return questionEntity;
     }
+
+
 
     public QuestionResponseDTO toDTO(QuestionEntity entity) {
         QuestionResponseDTO questionResponseDTO = new QuestionResponseDTO();

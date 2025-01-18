@@ -7,8 +7,15 @@ import com.example.quiz_management_service.dto.CategoryResponseDTO;
 
 public interface CategoryService {
     CategoryResponseDTO createCategory(CategoryRequestDTO categoryRequestDTO);
+    
     CategoryResponseDTO getCategoryById(Long id);
+    
     List<CategoryResponseDTO> getAllCategories();
+    
     CategoryResponseDTO updateCategory(Long id, CategoryRequestDTO categoryRequestDTO);
+    
     void deleteCategory(Long id);
+    
+    Long getCategoryIdByName(String categoryName);
+
 }
