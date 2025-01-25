@@ -1,0 +1,944 @@
+[INFO ] 2025-01-24 17:20:25.150 [background-preinit] [quiz-management-service] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+[INFO ] 2025-01-24 17:20:25.231 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:20:25.232 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:20:25.283 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2025-01-24 17:20:25.283 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2025-01-24 17:20:26.202 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:20:26.335 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 120 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:20:27.243 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:20:27.259 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:20:27.261 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:20:27.262 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:20:27.362 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:20:27.364 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2079 ms
+[INFO ] 2025-01-24 17:20:27.557 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:20:27.657 [restartedMain] [quiz-management-service] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.4.Final
+[INFO ] 2025-01-24 17:20:27.707 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:20:28.184 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:20:28.234 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2025-01-24 17:20:28.448 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d692b6b
+[INFO ] 2025-01-24 17:20:28.451 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2025-01-24 17:20:28.594 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:20:29.998 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:20:30.224 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:20:30.693 [restartedMain] [quiz-management-service] org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+[WARN ] 2025-01-24 17:20:31.747 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:20:32.296 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:20:32.317 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:20:32.347 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:20:32.358 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 7.877 seconds (process running for 8.486)
+[INFO ] 2025-01-24 17:21:15.878 [http-nio-8082-exec-1] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-01-24 17:21:15.878 [http-nio-8082-exec-1] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-01-24 17:21:15.883 [http-nio-8082-exec-1] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+[INFO ] 2025-01-24 17:21:16.054 [http-nio-8082-exec-1] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Entering createQuiz() with quizRequestDTO: QuizRequestDTO(title=null, description=A brief description of the quiz, categoryId=null, difficultyLevel=null)
+[INFO ] 2025-01-24 17:21:16.055 [http-nio-8082-exec-1] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Entering createQuiz() with quizRequestDTO: QuizRequestDTO(title=null, description=A brief description of the quiz, categoryId=null, difficultyLevel=null)
+[WARN ] 2025-01-24 17:21:16.187 [http-nio-8082-exec-1] [quiz-management-service] org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1048, SQLState: 23000
+[ERROR] 2025-01-24 17:21:16.187 [http-nio-8082-exec-1] [quiz-management-service] org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Column 'difficulty_level' cannot be null
+[ERROR] 2025-01-24 17:21:16.204 [http-nio-8082-exec-1] [quiz-management-service] com.example.quiz_management_service.exception.GlobalExceptionHandler - Unexpected error occurred: could not execute statement [Column 'difficulty_level' cannot be null] [insert into QuizEntity (category_id,created_at,description,difficulty_level,title,updated_at) values (?,?,?,?,?,?)]; SQL [insert into QuizEntity (category_id,created_at,description,difficulty_level,title,updated_at) values (?,?,?,?,?,?)]; constraint [null]
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [Column 'difficulty_level' cannot be null] [insert into QuizEntity (category_id,created_at,description,difficulty_level,title,updated_at) values (?,?,?,?,?,?)]; SQL [insert into QuizEntity (category_id,created_at,description,difficulty_level,title,updated_at) values (?,?,?,?,?,?)]; constraint [null]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:290)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy140.save(Unknown Source)
+	at com.example.quiz_management_service.service.impl.QuizServiceImpl.createQuiz(QuizServiceImpl.java:35)
+	at com.example.quiz_management_service.controller.QuizController.createQuiz(QuizController.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Column 'difficulty_level' cannot be null] [insert into QuizEntity (category_id,created_at,description,difficulty_level,title,updated_at) values (?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:62)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:682)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:293)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:274)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:324)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:393)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:307)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:223)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:136)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy4/jdk.proxy4.$Proxy132.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320)
+	at jdk.proxy4/jdk.proxy4.$Proxy132.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:627)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:752)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 57 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'difficulty_level' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	... 113 common frames omitted
+[WARN ] 2025-01-24 17:21:16.252 [http-nio-8082-exec-1] [quiz-management-service] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Column 'difficulty_level' cannot be null] [insert into QuizEntity (category_id,created_at,description,difficulty_level,title,updated_at) values (?,?,?,?,?,?)]; SQL [insert into QuizEntity (category_id,created_at,description,difficulty_level,title,updated_at) values (?,?,?,?,?,?)]; constraint [null]]
+[INFO ] 2025-01-24 17:26:41.714 [File Watcher] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2025-01-24 17:26:41.727 [Thread-5] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-01-24 17:26:41.730 [tomcat-shutdown] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:26:41.771 [tomcat-shutdown] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-01-24 17:26:41.771 [Thread-5] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:26:41.784 [Thread-5] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:26:41.788 [Thread-5] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2025-01-24 17:26:41.806 [Thread-5] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2025-01-24 17:26:41.918 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:26:41.918 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:26:42.132 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:26:42.166 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:26:42.295 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:26:42.297 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:26:42.297 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:26:42.297 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:26:42.333 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:26:42.333 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 412 ms
+[INFO ] 2025-01-24 17:26:42.376 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:26:42.379 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:26:42.398 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:26:42.399 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+[INFO ] 2025-01-24 17:26:42.415 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@299be84f
+[INFO ] 2025-01-24 17:26:42.416 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+[INFO ] 2025-01-24 17:26:42.418 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:26:42.529 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:26:42.571 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:26:42.709 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:26:42.871 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:26:42.881 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:26:42.889 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:26:42.899 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 1.017 seconds (process running for 379.027)
+[INFO ] 2025-01-24 17:26:42.902 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-01-24 17:27:31.381 [http-nio-8082-exec-2] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-01-24 17:27:31.382 [http-nio-8082-exec-2] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-01-24 17:27:31.386 [http-nio-8082-exec-2] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] 2025-01-24 17:27:31.575 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Received request to create quiz: QuizRequestDTO(title=Sample Quiz, description=A quiz to test basic knowledge., categoryId=1, difficultyLevel=EASY)
+[INFO ] 2025-01-24 17:27:31.577 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Entering createQuiz() with quizRequestDTO: QuizRequestDTO(title=Sample Quiz, description=A quiz to test basic knowledge., categoryId=1, difficultyLevel=EASY)
+[ERROR] 2025-01-24 17:27:31.819 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Unexpected error occurred while creating quiz: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.example.quiz_management_service.entity.QuizEntity#1]
+[INFO ] 2025-01-24 17:34:44.487 [File Watcher] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 10 class path changes (3 additions, 0 deletions, 7 modifications)
+[INFO ] 2025-01-24 17:34:44.493 [Thread-7] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-01-24 17:34:44.505 [tomcat-shutdown] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:34:44.567 [tomcat-shutdown] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-01-24 17:34:44.569 [Thread-7] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:34:44.576 [Thread-7] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:34:44.578 [Thread-7] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+[INFO ] 2025-01-24 17:34:44.583 [Thread-7] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+[INFO ] 2025-01-24 17:34:44.715 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:34:44.715 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:34:44.897 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:34:44.926 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:34:45.092 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:34:45.093 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:34:45.093 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:34:45.093 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:34:45.141 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:34:45.141 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 424 ms
+[INFO ] 2025-01-24 17:34:45.194 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:34:45.197 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:34:45.205 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:34:45.207 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+[INFO ] 2025-01-24 17:34:45.225 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5718e469
+[INFO ] 2025-01-24 17:34:45.225 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+[INFO ] 2025-01-24 17:34:45.227 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:34:45.366 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:34:45.419 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:34:45.584 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:34:45.749 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:34:45.756 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:34:45.761 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:34:45.769 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 1.084 seconds (process running for 861.898)
+[INFO ] 2025-01-24 17:34:45.772 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-01-24 17:34:57.418 [http-nio-8082-exec-2] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-01-24 17:34:57.419 [http-nio-8082-exec-2] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-01-24 17:34:57.421 [http-nio-8082-exec-2] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[INFO ] 2025-01-24 17:34:57.449 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Received request to create quiz: QuizRequestDTO(title=Sample Quiz, description=A quiz to test basic knowledge., categoryId=1, difficultyLevel=EASY)
+[INFO ] 2025-01-24 17:34:57.450 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Entering createQuiz() with quizRequestDTO: QuizRequestDTO(title=Sample Quiz, description=A quiz to test basic knowledge., categoryId=1, difficultyLevel=EASY)
+[ERROR] 2025-01-24 17:34:57.477 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Unexpected error occurred while creating quiz: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.example.quiz_management_service.entity.QuizEntity#1]
+[INFO ] 2025-01-24 17:35:55.012 [http-nio-8082-exec-4] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Fetching all quizzes
+[INFO ] 2025-01-24 17:35:55.014 [http-nio-8082-exec-4] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Entering getAllQuizzes()
+[INFO ] 2025-01-24 17:35:55.275 [http-nio-8082-exec-4] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Successfully fetched 0 quizzes
+[WARN ] 2025-01-24 17:35:55.275 [http-nio-8082-exec-4] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - No quizzes found
+[INFO ] 2025-01-24 17:36:01.246 [http-nio-8082-exec-5] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Fetching quiz with ID: 2
+[INFO ] 2025-01-24 17:36:01.247 [http-nio-8082-exec-5] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Entering getQuizById() with ID: 2
+[ERROR] 2025-01-24 17:36:01.297 [http-nio-8082-exec-5] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Quiz with ID: 2 not found
+[ERROR] 2025-01-24 17:36:01.297 [http-nio-8082-exec-5] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Quiz with ID: 2 not found
+[INFO ] 2025-01-24 17:37:21.610 [File Watcher] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2025-01-24 17:37:21.612 [Thread-11] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-01-24 17:37:21.613 [tomcat-shutdown] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:37:21.661 [tomcat-shutdown] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-01-24 17:37:21.663 [Thread-11] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:37:21.665 [Thread-11] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:37:21.667 [Thread-11] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+[INFO ] 2025-01-24 17:37:21.672 [Thread-11] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+[INFO ] 2025-01-24 17:37:21.762 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:37:21.762 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:37:21.921 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:37:21.947 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:37:22.058 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:37:22.060 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:37:22.062 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:37:22.062 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:37:22.135 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:37:22.135 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 372 ms
+[INFO ] 2025-01-24 17:37:22.169 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:37:22.171 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:37:22.180 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:37:22.180 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+[INFO ] 2025-01-24 17:37:22.192 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16c8e0ed
+[INFO ] 2025-01-24 17:37:22.192 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+[INFO ] 2025-01-24 17:37:22.193 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:37:22.327 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:37:22.500 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:37:22.615 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:37:22.769 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:37:22.776 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:37:22.782 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:37:22.787 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 1.05 seconds (process running for 1018.916)
+[INFO ] 2025-01-24 17:37:22.789 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-01-24 17:42:05.545 [File Watcher] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2025-01-24 17:42:05.551 [Thread-15] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-01-24 17:42:05.552 [tomcat-shutdown] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:42:05.633 [tomcat-shutdown] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-01-24 17:42:05.633 [Thread-15] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:42:05.635 [Thread-15] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:42:05.636 [Thread-15] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+[INFO ] 2025-01-24 17:42:05.641 [Thread-15] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+[INFO ] 2025-01-24 17:42:05.723 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:42:05.723 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:42:05.928 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:42:05.969 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:42:06.090 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:42:06.091 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:42:06.091 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:42:06.091 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:42:06.123 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:42:06.123 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 399 ms
+[INFO ] 2025-01-24 17:42:06.168 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:42:06.171 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:42:06.183 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:42:06.184 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+[INFO ] 2025-01-24 17:42:06.196 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19ec06f2
+[INFO ] 2025-01-24 17:42:06.196 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+[INFO ] 2025-01-24 17:42:06.201 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:42:06.296 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:42:06.345 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:42:06.469 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:42:06.632 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:42:06.641 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:42:06.646 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:42:06.652 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 0.961 seconds (process running for 1302.781)
+[INFO ] 2025-01-24 17:42:06.653 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-01-24 17:42:17.595 [http-nio-8082-exec-2] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-01-24 17:42:17.596 [http-nio-8082-exec-2] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-01-24 17:42:17.604 [http-nio-8082-exec-2] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2025-01-24 17:42:17.632 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Received request to create quiz: QuizRequestDTO(title=Sample Quiz, description=A quiz to test basic knowledge., categoryId=1, difficultyLevel=EASY)
+[INFO ] 2025-01-24 17:42:17.648 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Entering createQuiz() with quizRequestDTO: QuizRequestDTO(title=Sample Quiz, description=A quiz to test basic knowledge., categoryId=1, difficultyLevel=EASY)
+[ERROR] 2025-01-24 17:42:17.671 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Error while creating quiz: Detached entity with generated id '1' has an uninitialized version value 'null': com.example.quiz_management_service.entity.QuizEntity.version
+org.springframework.dao.DataIntegrityViolationException: Detached entity with generated id '1' has an uninitialized version value 'null': com.example.quiz_management_service.entity.QuizEntity.version
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:307)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy8/jdk.proxy8.$Proxy187.save(Unknown Source)
+	at com.example.quiz_management_service.service.impl.QuizServiceImpl.createQuiz(QuizServiceImpl.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
+	at com.example.quiz_management_service.service.impl.QuizServiceImpl$$SpringCGLIB$$0.createQuiz(<generated>)
+	at com.example.quiz_management_service.controller.QuizController.createQuiz(QuizController.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.hibernate.PropertyValueException: Detached entity with generated id '1' has an uninitialized version value 'null': com.example.quiz_management_service.entity.QuizEntity.version
+	at org.hibernate.persister.entity.AbstractEntityPersister.isTransient(AbstractEntityPersister.java:4307)
+	at org.hibernate.engine.internal.ForeignKeys.isTransient(ForeignKeys.java:316)
+	at org.hibernate.event.internal.EntityState.getEntityState(EntityState.java:64)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityState(DefaultPersistEventListener.java:114)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:87)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy8/jdk.proxy8.$Proxy183.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320)
+	at jdk.proxy8/jdk.proxy8.$Proxy183.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:627)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:752)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 69 common frames omitted
+[ERROR] 2025-01-24 17:42:17.677 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Unexpected error occurred while creating quiz: Detached entity with generated id '1' has an uninitialized version value 'null': com.example.quiz_management_service.entity.QuizEntity.version
+[INFO ] 2025-01-24 17:50:14.570 [File Watcher] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+[INFO ] 2025-01-24 17:50:14.574 [Thread-19] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-01-24 17:50:14.578 [tomcat-shutdown] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:14.625 [tomcat-shutdown] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-01-24 17:50:14.625 [Thread-19] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:14.627 [Thread-19] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:50:14.628 [Thread-19] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+[INFO ] 2025-01-24 17:50:14.633 [Thread-19] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+[INFO ] 2025-01-24 17:50:14.717 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:50:14.717 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:50:14.887 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:50:14.930 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:50:15.023 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:50:15.024 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:15.024 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:50:15.024 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:50:15.102 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:50:15.103 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 385 ms
+[INFO ] 2025-01-24 17:50:15.141 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:50:15.143 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:50:15.158 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:50:15.159 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+[INFO ] 2025-01-24 17:50:15.173 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@736b29bf
+[INFO ] 2025-01-24 17:50:15.173 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+[INFO ] 2025-01-24 17:50:15.175 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:50:15.255 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:50:15.300 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:50:15.421 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:50:15.538 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:50:15.545 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:15.549 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:50:15.553 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 0.862 seconds (process running for 1791.682)
+[INFO ] 2025-01-24 17:50:15.554 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-01-24 17:50:22.135 [File Watcher] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2025-01-24 17:50:22.138 [Thread-23] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-01-24 17:50:22.139 [tomcat-shutdown] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:22.193 [tomcat-shutdown] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-01-24 17:50:22.193 [Thread-23] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:22.194 [Thread-23] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:50:22.200 [Thread-23] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+[INFO ] 2025-01-24 17:50:22.202 [Thread-23] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+[INFO ] 2025-01-24 17:50:22.267 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:50:22.268 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:50:22.436 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:50:22.465 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:50:22.600 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:50:22.601 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:22.602 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:50:22.602 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:50:22.652 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:50:22.652 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 384 ms
+[INFO ] 2025-01-24 17:50:22.687 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:50:22.690 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:50:22.705 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:50:22.706 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+[INFO ] 2025-01-24 17:50:22.713 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38b90c61
+[INFO ] 2025-01-24 17:50:22.713 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+[INFO ] 2025-01-24 17:50:22.714 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:50:22.801 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:50:22.878 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:50:22.994 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:50:23.114 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:50:23.123 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:23.168 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:50:23.173 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 0.925 seconds (process running for 1799.301)
+[INFO ] 2025-01-24 17:50:23.174 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-01-24 17:50:46.114 [File Watcher] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+[INFO ] 2025-01-24 17:50:46.117 [Thread-27] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-01-24 17:50:46.119 [tomcat-shutdown] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:46.166 [tomcat-shutdown] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-01-24 17:50:46.166 [Thread-27] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:46.169 [Thread-27] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:50:46.170 [Thread-27] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+[INFO ] 2025-01-24 17:50:46.172 [Thread-27] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+[INFO ] 2025-01-24 17:50:46.297 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:50:46.297 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:50:46.431 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:50:46.460 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:50:46.544 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:50:46.545 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:46.545 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:50:46.545 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:50:46.612 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:50:46.612 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 313 ms
+[INFO ] 2025-01-24 17:50:46.649 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:50:46.654 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:50:46.661 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:50:46.663 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+[INFO ] 2025-01-24 17:50:46.674 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b0037f6
+[INFO ] 2025-01-24 17:50:46.674 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+[INFO ] 2025-01-24 17:50:46.676 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:50:46.751 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:50:46.858 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:50:46.985 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:50:47.115 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:50:47.121 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:50:47.126 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:50:47.136 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 0.861 seconds (process running for 1823.264)
+[INFO ] 2025-01-24 17:50:47.138 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-01-24 17:53:03.882 [File Watcher] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2025-01-24 17:53:03.884 [Thread-31] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-01-24 17:53:03.885 [tomcat-shutdown] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:53:03.913 [tomcat-shutdown] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-01-24 17:53:03.914 [Thread-31] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:53:03.915 [Thread-31] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:53:03.915 [Thread-31] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+[INFO ] 2025-01-24 17:53:03.918 [Thread-31] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+[INFO ] 2025-01-24 17:53:03.982 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:53:03.982 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:53:04.085 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:53:04.107 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:53:04.161 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:53:04.162 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:53:04.163 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:53:04.163 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:53:04.182 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:53:04.182 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 199 ms
+[INFO ] 2025-01-24 17:53:04.202 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:53:04.204 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:53:04.214 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:53:04.216 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+[INFO ] 2025-01-24 17:53:04.225 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f8db985
+[INFO ] 2025-01-24 17:53:04.225 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+[INFO ] 2025-01-24 17:53:04.226 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:53:04.274 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:53:04.303 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:53:04.365 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quizController' defined in file [D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes\com\example\quiz_management_service\controller\QuizController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'quizServiceImpl' defined in file [D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes\com\example\quiz_management_service\service\impl\QuizServiceImpl.class]: Failed to instantiate [com.example.quiz_management_service.service.impl.QuizServiceImpl]: Constructor threw exception
+[INFO ] 2025-01-24 17:53:04.365 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:53:04.365 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+[INFO ] 2025-01-24 17:53:04.377 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+[INFO ] 2025-01-24 17:53:04.377 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+[INFO ] 2025-01-24 17:53:04.382 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[ERROR] 2025-01-24 17:53:04.400 [restartedMain] [quiz-management-service] org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quizController' defined in file [D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes\com\example\quiz_management_service\controller\QuizController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'quizServiceImpl' defined in file [D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes\com\example\quiz_management_service\service\impl\QuizServiceImpl.class]: Failed to instantiate [com.example.quiz_management_service.service.impl.QuizServiceImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.quiz_management_service.QuizManagementServiceApplication.main(QuizManagementServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quizServiceImpl' defined in file [D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes\com\example\quiz_management_service\service\impl\QuizServiceImpl.class]: Failed to instantiate [com.example.quiz_management_service.service.impl.QuizServiceImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.quiz_management_service.service.impl.QuizServiceImpl]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 40 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "}", delete this token
+
+	at com.example.quiz_management_service.service.impl.QuizServiceImpl.<init>(QuizServiceImpl.java:73)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 42 common frames omitted
+[INFO ] 2025-01-24 17:54:10.301 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:54:10.301 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:54:10.415 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:54:10.432 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:54:10.487 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:54:10.489 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:54:10.489 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:54:10.489 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:54:10.506 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:54:10.506 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 204 ms
+[INFO ] 2025-01-24 17:54:10.528 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:54:10.531 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:54:10.538 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:54:10.538 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+[INFO ] 2025-01-24 17:54:10.545 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d1b088b
+[INFO ] 2025-01-24 17:54:10.545 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+[INFO ] 2025-01-24 17:54:10.545 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-10)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:54:10.601 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:54:10.627 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:54:10.694 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quizController' defined in file [D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes\com\example\quiz_management_service\controller\QuizController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'quizServiceImpl' defined in file [D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes\com\example\quiz_management_service\service\impl\QuizServiceImpl.class]: Failed to instantiate [com.example.quiz_management_service.service.impl.QuizServiceImpl]: Constructor threw exception
+[INFO ] 2025-01-24 17:54:10.694 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:54:10.695 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+[INFO ] 2025-01-24 17:54:10.699 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+[INFO ] 2025-01-24 17:54:10.700 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+[INFO ] 2025-01-24 17:54:10.705 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[ERROR] 2025-01-24 17:54:10.707 [restartedMain] [quiz-management-service] org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quizController' defined in file [D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes\com\example\quiz_management_service\controller\QuizController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'quizServiceImpl' defined in file [D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes\com\example\quiz_management_service\service\impl\QuizServiceImpl.class]: Failed to instantiate [com.example.quiz_management_service.service.impl.QuizServiceImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.quiz_management_service.QuizManagementServiceApplication.main(QuizManagementServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quizServiceImpl' defined in file [D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes\com\example\quiz_management_service\service\impl\QuizServiceImpl.class]: Failed to instantiate [com.example.quiz_management_service.service.impl.QuizServiceImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.quiz_management_service.service.impl.QuizServiceImpl]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 40 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "}", delete this token
+
+	at com.example.quiz_management_service.service.impl.QuizServiceImpl.<init>(QuizServiceImpl.java:72)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 42 common frames omitted
+[INFO ] 2025-01-24 17:54:35.670 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:54:35.670 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:54:35.830 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:54:35.855 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:54:35.917 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:54:35.918 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:54:35.918 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:54:35.918 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:54:35.941 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:54:35.941 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 270 ms
+[INFO ] 2025-01-24 17:54:35.965 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:54:35.966 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:54:35.971 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:54:35.971 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+[INFO ] 2025-01-24 17:54:35.980 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56a6d6c8
+[INFO ] 2025-01-24 17:54:35.980 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+[INFO ] 2025-01-24 17:54:35.981 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-11)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:54:36.042 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:54:36.074 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:54:36.151 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:54:36.228 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:54:36.233 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:54:36.237 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:54:36.241 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 0.588 seconds (process running for 2052.37)
+[INFO ] 2025-01-24 17:54:36.243 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-01-24 17:54:50.474 [http-nio-8082-exec-2] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-01-24 17:54:50.474 [http-nio-8082-exec-2] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-01-24 17:54:50.475 [http-nio-8082-exec-2] [quiz-management-service] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[INFO ] 2025-01-24 17:54:50.485 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Received request to create quiz: QuizRequestDTO(title=Sample Quiz, description=A quiz to test basic knowledge., categoryId=1, difficultyLevel=EASY)
+[INFO ] 2025-01-24 17:54:50.490 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Entering createQuiz() with quizRequestDTO: QuizRequestDTO(title=Sample Quiz, description=A quiz to test basic knowledge., categoryId=1, difficultyLevel=EASY)
+[WARN ] 2025-01-24 17:54:50.491 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Quiz ID should be null for a new entity. Clearing it.
+[INFO ] 2025-01-24 17:54:50.534 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Successfully created quiz with ID: 1
+[INFO ] 2025-01-24 17:54:50.553 [http-nio-8082-exec-2] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Quiz created successfully with ID: 1
+[INFO ] 2025-01-24 17:55:08.523 [http-nio-8082-exec-3] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Fetching all quizzes
+[INFO ] 2025-01-24 17:55:08.524 [http-nio-8082-exec-3] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Fetching all quizzes
+[INFO ] 2025-01-24 17:55:08.549 [http-nio-8082-exec-3] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Fetched 1 quizzes
+[INFO ] 2025-01-24 17:55:08.563 [http-nio-8082-exec-3] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Fetched 1 quizzes
+[INFO ] 2025-01-24 17:55:13.306 [http-nio-8082-exec-4] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Fetching quiz with ID: 2
+[INFO ] 2025-01-24 17:55:13.308 [http-nio-8082-exec-4] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Fetching quiz with ID: 2
+[ERROR] 2025-01-24 17:55:13.314 [http-nio-8082-exec-4] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Quiz with ID: 2 not found
+[ERROR] 2025-01-24 17:55:13.315 [http-nio-8082-exec-4] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Quiz with ID: 2 not found
+[INFO ] 2025-01-24 17:55:27.462 [http-nio-8082-exec-5] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Fetching quiz with ID: 1
+[INFO ] 2025-01-24 17:55:27.462 [http-nio-8082-exec-5] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Fetching quiz with ID: 1
+[INFO ] 2025-01-24 17:55:27.470 [http-nio-8082-exec-5] [quiz-management-service] com.example.quiz_management_service.service.impl.QuizServiceImpl - Successfully fetched quiz with ID: 1
+[INFO ] 2025-01-24 17:55:27.472 [http-nio-8082-exec-5] [quiz-management-service] com.example.quiz_management_service.controller.QuizController - Fetched quiz: QuizResponseDTO(id=1, title=Sample Quiz, description=A quiz to test basic knowledge., categoryId=1, difficultyLevel=EASY, questions=[])
+[INFO ] 2025-01-24 17:56:32.581 [File Watcher] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2025-01-24 17:56:32.583 [Thread-35] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-01-24 17:56:32.583 [tomcat-shutdown] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:56:32.610 [tomcat-shutdown] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-01-24 17:56:32.611 [Thread-35] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:56:32.613 [Thread-35] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:56:32.615 [Thread-35] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+[INFO ] 2025-01-24 17:56:32.620 [Thread-35] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+[INFO ] 2025-01-24 17:56:32.693 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:56:32.693 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:56:32.805 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:56:32.825 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:56:32.883 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:56:32.884 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:56:32.884 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:56:32.884 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:56:32.905 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:56:32.906 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 212 ms
+[INFO ] 2025-01-24 17:56:32.933 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:56:32.935 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:56:32.942 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:56:32.943 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+[INFO ] 2025-01-24 17:56:32.951 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e7e48d5
+[INFO ] 2025-01-24 17:56:32.951 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+[INFO ] 2025-01-24 17:56:32.952 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-12)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:56:32.999 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:56:33.030 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:56:33.128 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:56:33.201 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:56:33.206 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:56:33.209 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:56:33.212 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 0.538 seconds (process running for 2169.341)
+[INFO ] 2025-01-24 17:56:33.215 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-01-24 17:59:22.177 [File Watcher] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2025-01-24 17:59:22.180 [Thread-45] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-01-24 17:59:22.182 [tomcat-shutdown] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:59:22.244 [tomcat-shutdown] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-01-24 17:59:22.245 [Thread-45] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:59:22.250 [Thread-45] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-24 17:59:22.250 [Thread-45] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+[INFO ] 2025-01-24 17:59:22.252 [Thread-45] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+[INFO ] 2025-01-24 17:59:22.329 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Starting QuizManagementServiceApplication using Java 17.0.12 with PID 2508 (D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service\target\classes started by Ashif in D:\AMEER\Quiz-Application\quiz-management-service\quiz-management-service)
+[INFO ] 2025-01-24 17:59:22.329 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-24 17:59:22.468 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-24 17:59:22.488 [restartedMain] [quiz-management-service] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 6 JPA repository interfaces.
+[INFO ] 2025-01-24 17:59:22.566 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-01-24 17:59:22.566 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:59:22.566 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-24 17:59:22.566 [restartedMain] [quiz-management-service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[INFO ] 2025-01-24 17:59:22.585 [restartedMain] [quiz-management-service] org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-24 17:59:22.585 [restartedMain] [quiz-management-service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 255 ms
+[INFO ] 2025-01-24 17:59:22.610 [restartedMain] [quiz-management-service] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-24 17:59:22.612 [restartedMain] [quiz-management-service] org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-24 17:59:22.619 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-24 17:59:22.620 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+[INFO ] 2025-01-24 17:59:22.628 [restartedMain] [quiz-management-service] com.zaxxer.hikari.pool.HikariPool - HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58f018ed
+[INFO ] 2025-01-24 17:59:22.628 [restartedMain] [quiz-management-service] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+[INFO ] 2025-01-24 17:59:22.634 [restartedMain] [quiz-management-service] org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-13)']
+	Database driver: undefined/unknown
+	Database version: 8.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO ] 2025-01-24 17:59:22.687 [restartedMain] [quiz-management-service] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-24 17:59:22.718 [restartedMain] [quiz-management-service] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-24 17:59:22.809 [restartedMain] [quiz-management-service] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-24 17:59:22.936 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-01-24 17:59:22.941 [restartedMain] [quiz-management-service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-01-24 17:59:22.949 [restartedMain] [quiz-management-service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-01-24 17:59:22.952 [restartedMain] [quiz-management-service] com.example.quiz_management_service.QuizManagementServiceApplication - Started QuizManagementServiceApplication in 0.647 seconds (process running for 2339.08)
+[INFO ] 2025-01-24 17:59:22.953 [restartedMain] [quiz-management-service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged

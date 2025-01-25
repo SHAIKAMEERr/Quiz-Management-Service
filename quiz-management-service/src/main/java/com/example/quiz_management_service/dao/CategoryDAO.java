@@ -18,4 +18,6 @@ public interface CategoryDAO extends JpaRepository<CategoryEntity, Long> {
     
     Optional<CategoryEntity> findByName(String name);
 
+    boolean existsByName(String name);
+
 }

@@ -32,8 +32,8 @@ public class QuestionEntity {
     private QuizEntity quiz;
 
     @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false)  // Added category mapping
-    private CategoryEntity category;  // Assuming Category is another entity
+    @JoinColumn(name = "category_id", nullable = false) 
+    private CategoryEntity category;  
 
     @Column(name = "question_text", nullable = false)
     private String questionText;

@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 import com.example.quiz_management_service.dto.CategoryRequestDTO;
 import com.example.quiz_management_service.dto.CategoryResponseDTO;
+import com.example.quiz_management_service.exception.ErrorDetails;
 import com.example.quiz_management_service.service.CategoryService;
 
 import jakarta.validation.Valid;
@@ -27,25 +27,34 @@ import jakarta.validation.Valid;
 @RequestMapping("/api/v1/categories")
 public class CategoryController {
 
-    private static final Logger logger = LoggerFactory.getLogger(CategoryController.class);
+    private static final Logger logger = LoggerFactory.getLogger(
+    		CategoryController.class);
 
     @Autowired
     private CategoryService categoryService;
 
     @PostMapping
-    public ResponseEntity<CategoryResponseDTO> createCategory(@Valid @RequestBody CategoryRequestDTO categoryRequestDTO) {
+    public ResponseEntity<Object> createCategory(@Valid @RequestBody CategoryRequestDTO categoryRequestDTO) {
         logger.info("Received request to create a new category: {}", categoryRequestDTO);
         try {
+            // Check input values (Debugging)
+            logger.debug("Request Data: {}", categoryRequestDTO);
+
             // Call service to create the category
             CategoryResponseDTO createdCategory = categoryService.createCategory(categoryRequestDTO);
 
             // Log success and return response
             logger.info("Successfully created category with ID: {}", createdCategory.getId());
             return ResponseEntity.status(HttpStatus.CREATED).body(createdCategory);
+
+        } catch (IllegalArgumentException e) {
+            logger.error("Validation Error: {}", e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body(new ErrorDetails("Duplicate category name", e.getMessage()));
         } catch (Exception e) {
-            // Log error and rethrow it
-            logger.error("Error occurred while creating a category", e);
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to create category", e);
+            logger.error("Unexpected Error: ", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new ErrorDetails("Internal Server Error", e.getMessage()));
         }
     }
 

@@ -12,9 +12,15 @@ import lombok.NoArgsConstructor;
 public class QuestionResponseDTO {
 
     private Long id;
+    
     private String questionText;
+    
     private String questionType; 
+    
     private String difficultyLevel;
+    
     private Long quizId;
+    
     private List<OptionResponseDTO> options; 
+    
 }

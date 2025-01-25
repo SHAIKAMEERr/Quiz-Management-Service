@@ -10,10 +10,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class QuizResponseDTO {
+	
 	 private Long id;
-	    private String title;
-	    private String description;
-	    private Long categoryId; 
-	    private String difficultyLevel; 
-	    private List<QuestionResponseDTO> questions;
+	 
+	 private String title;
+	    
+	 private String description;
+	    
+	 private Long categoryId; 
+	    
+	 private String difficultyLevel; 
+	    
+	 private List<QuestionResponseDTO> questions;
 }

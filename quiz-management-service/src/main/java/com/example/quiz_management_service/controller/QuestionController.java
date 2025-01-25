@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.quiz_management_service.dto.QuestionRequestDTO;
 import com.example.quiz_management_service.dto.QuestionResponseDTO;
+import com.example.quiz_management_service.exception.GlobalExceptionHandler.ErrorResponse;
+import com.example.quiz_management_service.exception.QuestionNotFoundException;
 import com.example.quiz_management_service.service.QuestionService;
 
 import jakarta.validation.Valid;
@@ -31,42 +34,98 @@ public class QuestionController {
     public QuestionController(QuestionService questionService) {
         this.questionService = questionService;
     }
+    
+    @PostMapping
+    public ResponseEntity<?> addQuestion(@Valid @RequestBody QuestionRequestDTO
+    		questionRequestDTO) {
+    	
+        logger.info("Received request to add a new question: {}", questionRequestDTO);
+        
+        try {
+            QuestionResponseDTO createdQuestion = questionService.addQuestion(
+            		questionRequestDTO);
+            
+            logger.info("Successfully added a new question with ID: {}"
+            		, createdQuestion.getId());
+            
+            return ResponseEntity.ok(createdQuestion);
+            
+        } catch (Exception e) {
+        	
+            logger.error("Error occurred while adding a new question", e);
+            
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(new ErrorResponse("An error occurred while adding the "
+                		+ "question. Please try again later."));
+        }
+    }
+
 
     @GetMapping("/search")
-    public ResponseEntity<List<QuestionResponseDTO>> getQuestionsByKeyword(@RequestParam String keyword) {
+    public ResponseEntity<?> getQuestionsByKeyword(@RequestParam String keyword) {
+    	
         logger.info("Received request to search questions with keyword: {}", keyword);
         try {
-            List<QuestionResponseDTO> questions = questionService.getQuestionsByKeyword(keyword);
-            logger.info("Successfully retrieved {} questions for keyword: {}", questions.size(), keyword);
+            List<QuestionResponseDTO> questions = questionService
+            		.getQuestionsByKeyword(keyword);
+            
+            if (questions.isEmpty()) {
+                return ResponseEntity.noContent().build(); 
+            }
+            logger.info("Successfully retrieved {} questions for keyword: {}"
+            		, questions.size(), keyword);
+            
             return ResponseEntity.ok(questions);
+        } catch (QuestionNotFoundException e) {
+            logger.error("No questions found for keyword: {}", keyword);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            		.body(new ErrorResponse("Question not found"));
         } catch (Exception e) {
-            logger.error("Error occurred while searching questions with keyword: {}", keyword, e);
+            logger.error("Error occurred while searching questions with keyword: {}"
+            		, keyword, e);
             throw e;
         }
     }
 
     @GetMapping("/category/{categoryId}")
-    public ResponseEntity<List<QuestionResponseDTO>> getQuestionsByCategory(@PathVariable Long categoryId) {
+    public ResponseEntity<List<QuestionResponseDTO>> getQuestionsByCategory(
+    		@PathVariable Long categoryId) {
+    	
         logger.info("Received request to get questions by category ID: {}", categoryId);
+        
         try {
-            List<QuestionResponseDTO> questions = questionService.getQuestionsByCategory(categoryId);
-            logger.info("Successfully retrieved {} questions for category ID: {}", questions.size(), categoryId);
+            List<QuestionResponseDTO> questions = questionService
+            		.getQuestionsByCategory(categoryId);
+            
+            logger.info("Successfully retrieved {} questions for"
+            		+ " category ID: {}", questions.size(), categoryId);
+            
             return ResponseEntity.ok(questions);
+            
         } catch (Exception e) {
-            logger.error("Error occurred while retrieving questions by category ID: {}", categoryId, e);
+            logger.error("Error occurred while retrieving"
+            		+ " questions by category ID: {}", categoryId, e);
             throw e;
         }
     }
 
     @GetMapping("/difficulty/{difficultyLevel}")
-    public ResponseEntity<List<QuestionResponseDTO>> getQuestionsByDifficulty(@PathVariable String difficultyLevel) {
-        logger.info("Received request to get questions by difficulty level: {}", difficultyLevel);
+    public ResponseEntity<List<QuestionResponseDTO>> getQuestionsByDifficulty(
+    		@PathVariable String difficultyLevel) {
+    	
+        logger.info("Received request to get questions by difficulty"
+        		+ " level: {}", difficultyLevel);
         try {
-            List<QuestionResponseDTO> questions = questionService.getQuestionsByDifficulty(difficultyLevel);
-            logger.info("Successfully retrieved {} questions for difficulty level: {}", questions.size(), difficultyLevel);
+            List<QuestionResponseDTO> questions = questionService
+            		.getQuestionsByDifficulty(difficultyLevel);
+            
+            logger.info("Successfully retrieved {} questions"
+            		+ " for difficulty level: {}", questions.size(), difficultyLevel);
+            
             return ResponseEntity.ok(questions);
         } catch (Exception e) {
-            logger.error("Error occurred while retrieving questions by difficulty level: {}", difficultyLevel, e);
+            logger.error("Error occurred while retrieving"
+            		+ " questions by difficulty level: {}", difficultyLevel, e);
             throw e;
         }
     }
@@ -110,21 +169,7 @@ public class QuestionController {
             throw e;
         }
     }
-    
-    @PostMapping
-    public ResponseEntity<QuestionResponseDTO> addQuestion(@Valid @RequestBody QuestionRequestDTO questionRequestDTO) {
-        logger.info("Received request to add a new question: {}", questionRequestDTO);
-        try {
-            QuestionResponseDTO createdQuestion = questionService.addQuestion(questionRequestDTO);
-            logger.info("Successfully added a new question with ID: {}", createdQuestion.getId());
-            return ResponseEntity.ok(createdQuestion);
-        } catch (Exception e) {
-            logger.error("Error occurred while adding a new question", e);
-            throw e;
-        }
-    }
-
-    
+     
     @DeleteMapping("/{questionId}")
     public ResponseEntity<Void> deleteQuestion(@PathVariable Long questionId) {
         logger.info("Received request to delete question with ID: {}", questionId);

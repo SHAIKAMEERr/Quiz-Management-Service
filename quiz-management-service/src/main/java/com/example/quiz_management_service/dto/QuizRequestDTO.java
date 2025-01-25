@@ -22,5 +22,5 @@ public class QuizRequestDTO {
 
     @NotBlank(message = "Difficulty Level is required")
     @Pattern(regexp = "EASY|MEDIUM|HARD", message = "Invalid difficulty level. Allowed values: EASY, MEDIUM, HARD")
-    private String difficultyLevel; // Add this field for the difficulty level
+    private String difficultyLevel;
 }
