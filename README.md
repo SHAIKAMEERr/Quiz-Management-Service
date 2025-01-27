@@ -1,158 +1,180 @@
 # Quiz Management Service
 
-## Overview
-The Quiz Management Service is a microservice designed to handle the creation, management, and evaluation of quizzes. This service follows a RESTful architecture with versioning and provides endpoints for managing quizzes, questions, and results.
+The **Quiz Management Service** is a comprehensive RESTful microservice for managing quizzes, quiz attempts, and results. Built with **Java** and **Spring Boot**, it provides a scalable and secure platform that adheres to best practices for API development, ensuring seamless integration and maintainability.
 
----
+## Key Features
 
-## Features
-- **Quiz Management**: Create, update, delete, and retrieve quizzes.
-- **Question Management**: Add, update, delete, and retrieve questions for quizzes.
-- **Quiz Attempts**: Submit and track quiz attempts.
-- **Results**: Evaluate and retrieve quiz results.
-- **Validation**: Comprehensive validation for all incoming data.
-- **Scalability**: Designed for microservices architecture with modular components.
+### 1. Quiz Management
+- Create, update, delete, and retrieve quizzes.
+- Manage quiz questions, options, and scoring rules.
+- Enforce time limits and other quiz rules.
 
----
+### 2. Quiz Attempt Handling
+- Allow users to attempt quizzes with real-time tracking.
+- Validate answers and compute scores dynamically.
+- Store and retrieve quiz results with detailed insights.
 
-## Technologies and Tools
+### 3. User Integration
+- Integrates with the **User Management Service** for user authentication and role-based access control (RBAC).
+
+### 4. Security
+- Uses **OAuth 2.0** for secure authentication.
+- Implements **HMAC SHA-256** to safeguard sensitive data.
+
+### 5. Standards Compliance
+- RESTful API standards with proper versioning and naming conventions.
+- Detailed Swagger documentation for easy API consumption.
+
+## Technologies Used
+
 ### Backend
-- **Programming Language**: Java
-- **Framework**: Spring Boot (REST API Development)
-- **Architecture**: Microservices
-- **Database**: MySQL (via Spring Data JPA)
+- **Java** (Core backend programming)
+- **Spring Boot** (Web, Data JPA, Security, Validation)
+- **ModelMapper** (Object mapping)
+- **Lombok** (Simplifies code with annotations)
+- **SLF4J** (Logging framework)
+- **Gson** (JSON serialization/deserialization)
 
-### Utilities
-- **Model Mapping**: ModelMapper (Mapping POJOs, DTOs, and Entities)
-- **Code Reduction**: Lombok (Reducing boilerplate code)
-- **Logging**: SLF4J (Structured logging for debugging and monitoring)
-- **Data Conversion**: Gson (Convert Java objects to JSON strings and vice versa)
+### Database
+- **MySQL** (Relational database)
+- **Spring Data JPA** (Database interaction)
 
 ### Security
-- **Authentication and Authorization**: OAuth 2.0
-- **Data Security**: HMAC SHA-256 (Securing sensitive user data)
+- **OAuth 2.0** (Authentication)
+- **HMAC SHA-256** (Data security)
 
----
+### Testing & Documentation
+- **JUnit** & **Mockito** (Unit and integration testing)
+- **Swagger UI** (API documentation)
 
-## Project Structure
+## Architecture
+
+The service is designed with a **3-tier architecture**:
+
+1. **Controller Layer**
+   - Handles user input and returns API responses.
+   - Accepts POJOs and returns DTOs.
+
+2. **Service Layer**
+   - Implements business logic.
+   - Maps POJOs to DTOs and vice versa using **ModelMapper**.
+
+3. **Repository Layer**
+   - Interacts with the database.
+   - Maps DTOs to DAOs/Entities using **Spring Data JPA**.
+
+## Packaging Structure
+
+The project uses the following packaging structure to ensure modularity and maintainability:
+
 ```
-com.example.quizattemptservice
+com.example.quizmanagementservice
     ├── controller
     │     ├── QuizController.java
     │     ├── QuizAttemptController.java
-    │     ├── QuestionAttemptController.java
     │     ├── QuizResultController.java
     │
     ├── service
+    │     ├── QuizService.java
     │     ├── QuizAttemptService.java
     │     ├── QuizResultService.java
-    │     ├── QuestionAttemptService.java
     │     ├── impl
+    │           ├── QuizServiceImpl.java
     │           ├── QuizAttemptServiceImpl.java
     │           ├── QuizResultServiceImpl.java
-    │           ├── QuestionAttemptServiceImpl.java
     │
     ├── repository
+    │     ├── QuizRepository.java
     │     ├── QuizAttemptRepository.java
-    │     ├── QuestionAttemptRepository.java
     │     ├── QuizResultRepository.java
     │
     ├── model
+    │     ├── Quiz.java
     │     ├── QuizAttempt.java
-    │     ├── QuestionAttempt.java
     │     ├── QuizResult.java
-    │     ├── User.java
     │
     ├── dto
-    │     ├── QuizAttemptRequestDTO.java
-    │     ├── QuizAttemptResponseDTO.java
-    │     ├── QuestionAttemptDTO.java
+    │     ├── QuizDTO.java
+    │     ├── QuizAttemptDTO.java
     │     ├── QuizResultDTO.java
-    │     ├── UserDTO.java
-    │
-    ├── mapper
-    │     ├── QuizAttemptMapper.java
-    │     ├── QuestionAttemptMapper.java
-    │     ├── QuizResultMapper.java
-    │     ├── UserMapper.java
-    │
-    ├── exception
-    │     ├── QuizAttemptException.java
-    │     ├── QuestionAttemptException.java
-    │     ├── QuizResultException.java
-    │     ├── ErrorDetails.java
     │
     ├── config
     │     ├── AppConfig.java
     │     ├── SwaggerConfig.java
     │
+    ├── mapper
+    │     ├── QuizMapper.java
+    │     ├── QuizAttemptMapper.java
+    │     ├── QuizResultMapper.java
+    │
+    ├── exception
+    │     ├── GlobalExceptionHandler.java
+    │     ├── QuizException.java
+    │
     ├── util
-    │     ├── QuizAttemptUtils.java
+    │     ├── QuizUtils.java
     │     ├── ScoringUtils.java
-    │     ├── TimeUtils.java
     │
-    ├── listener
-    │     ├── QuizAttemptListener.java
-    │
-    ├── validator
-    │     ├── QuizValidator.java
-    │     ├── QuestionValidator.java
-    │
-    ├── QuizAttemptServiceApplication.java
+    ├── QuizManagementServiceApplication.java
 ```
 
----
+## API Endpoints
 
-## Key Design Decisions
-1. **3-Tier Architecture**:
-   - **Controller Layer**: Handles API requests and responses.
-   - **Service Layer**: Contains business logic and DTO transformations.
-   - **Repository Layer**: Manages database interactions using JPA.
+The service runs on **port 8082**.
 
-2. **Data Mapping**:
-   - POJOs in Controller Layer.
-   - DTOs in Service Layer.
-   - Entities in Repository Layer.
+### Quiz Management Endpoints
+- `POST /api/v1/quizzes` - Create a new quiz.
+- `GET /api/v1/quizzes` - Retrieve all quizzes.
+- `GET /api/v1/quizzes/{id}` - Retrieve a quiz by ID.
+- `PUT /api/v1/quizzes/{id}` - Update an existing quiz.
+- `DELETE /api/v1/quizzes/{id}` - Delete a quiz.
 
-3. **API Standards**:
-   - RESTful endpoints.
-   - Versioning (e.g., `/api/v1/quizzes`).
+### Quiz Attempt Endpoints
+- `POST /api/v1/quizzes/{id}/attempts` - Start a quiz attempt.
+- `GET /api/v1/attempts/{id}` - Retrieve a quiz attempt.
+- `POST /api/v1/attempts/{id}/submit` - Submit answers for scoring.
 
-4. **Error Handling**:
-   - Custom exceptions for better error clarity.
-   - Standardized error responses using `ErrorDetails`.
+### Quiz Results Endpoints
+- `GET /api/v1/results` - Retrieve all quiz results.
+- `GET /api/v1/results/{id}` - Retrieve a specific result.
 
----
+## Installation
 
-## Deployment and Scalability
-- **Containerization**: Ready for Docker and Kubernetes (future expansion).
-- **Scalable Database**: MySQL with proper indexing for performance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/quiz-management-service.git
+   ```
 
----
+2. Navigate to the project directory:
+   ```bash
+   cd quiz-management-service
+   ```
+
+3. Build the project:
+   ```bash
+   mvn clean install
+   ```
+
+4. Run the application:
+   ```bash
+   mvn spring-boot:run
+   ```
+
+5. Access the Swagger UI for API documentation:
+   ```
+   http://localhost:8082/swagger-ui.html
+   ```
 
 ## Future Enhancements
-- Integration with the User Management Service.
-- Real-time quiz evaluations.
-- Docker and Kubernetes for orchestration.
-- Enhanced analytics and reporting.
 
----
-
-## Contributing
-We welcome contributions to improve the Quiz Management Service! Please follow our [Contribution Guidelines](CONTRIBUTING.md).
-
----
+- Add support for quiz analytics and reporting.
+- Enable adaptive and timed quizzes.
+- Integrate with payment gateways for premium quizzes.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## Contact
-
-For inquiries, please contact:
-
-- **Email**: [Mail Me](shaikameerjann@gmail.com)
-- **LinkedIn**: [Connect](https://www.linkedin.com/in/ameer-shaikk/)
-
-
+For more information, contact [Connect](https://www.linkedin.com/in/ameer-shaikk/).
